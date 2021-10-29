@@ -17,6 +17,13 @@
 		ECC3E2E72722886800A9F7FC /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2E52722886800A9F7FC /* CustomTableViewCell.xib */; };
 		ECC3E2EA27228D7300A9F7FC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3E2E827228D7300A9F7FC /* CollectionViewCell.swift */; };
 		ECC3E2EB27228D7300A9F7FC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2E927228D7300A9F7FC /* CollectionViewCell.xib */; };
+		ECC3E2EE2723E03F00A9F7FC /* ObjectSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3E2EC2723E03F00A9F7FC /* ObjectSceneViewCtrl.swift */; };
+		ECC3E2EF2723E03F00A9F7FC /* ObjectSceneViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2ED2723E03F00A9F7FC /* ObjectSceneViewCtrl.xib */; };
+		ECC3E2F72724146300A9F7FC /* laces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2F22724146200A9F7FC /* laces.jpg */; };
+		ECC3E2F82724146300A9F7FC /* converse_obj.mtl in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2F32724146300A9F7FC /* converse_obj.mtl */; };
+		ECC3E2F92724146300A9F7FC /* converse_bump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2F42724146300A9F7FC /* converse_bump.jpg */; };
+		ECC3E2FA2724146300A9F7FC /* converse_obj.obj in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2F52724146300A9F7FC /* converse_obj.obj */; };
+		ECC3E2FB2724146300A9F7FC /* converse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECC3E2F62724146300A9F7FC /* converse.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		ECC3E2E52722886800A9F7FC /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		ECC3E2E827228D7300A9F7FC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		ECC3E2E927228D7300A9F7FC /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		ECC3E2EC2723E03F00A9F7FC /* ObjectSceneViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSceneViewCtrl.swift; sourceTree = "<group>"; };
+		ECC3E2ED2723E03F00A9F7FC /* ObjectSceneViewCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectSceneViewCtrl.xib; sourceTree = "<group>"; };
+		ECC3E2F22724146200A9F7FC /* laces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laces.jpg; sourceTree = "<group>"; };
+		ECC3E2F32724146300A9F7FC /* converse_obj.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = converse_obj.mtl; sourceTree = "<group>"; };
+		ECC3E2F42724146300A9F7FC /* converse_bump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = converse_bump.jpg; sourceTree = "<group>"; };
+		ECC3E2F52724146300A9F7FC /* converse_obj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = converse_obj.obj; sourceTree = "<group>"; };
+		ECC3E2F62724146300A9F7FC /* converse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = converse.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,13 @@
 				ECC3E2E52722886800A9F7FC /* CustomTableViewCell.xib */,
 				ECC3E2E827228D7300A9F7FC /* CollectionViewCell.swift */,
 				ECC3E2E927228D7300A9F7FC /* CollectionViewCell.xib */,
+				ECC3E2EC2723E03F00A9F7FC /* ObjectSceneViewCtrl.swift */,
+				ECC3E2ED2723E03F00A9F7FC /* ObjectSceneViewCtrl.xib */,
+				ECC3E2F42724146300A9F7FC /* converse_bump.jpg */,
+				ECC3E2F32724146300A9F7FC /* converse_obj.mtl */,
+				ECC3E2F52724146300A9F7FC /* converse_obj.obj */,
+				ECC3E2F62724146300A9F7FC /* converse.jpg */,
+				ECC3E2F22724146200A9F7FC /* laces.jpg */,
 				EC01884227214A080096A59F /* Assets.xcassets */,
 				EC01884427214A080096A59F /* LaunchScreen.storyboard */,
 				EC01884727214A080096A59F /* Info.plist */,
@@ -136,11 +157,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC3E2FA2724146300A9F7FC /* converse_obj.obj in Resources */,
 				EC01884627214A080096A59F /* LaunchScreen.storyboard in Resources */,
 				ECC3E2E32722833100A9F7FC /* ViewController.xib in Resources */,
+				ECC3E2F82724146300A9F7FC /* converse_obj.mtl in Resources */,
 				ECC3E2E72722886800A9F7FC /* CustomTableViewCell.xib in Resources */,
+				ECC3E2FB2724146300A9F7FC /* converse.jpg in Resources */,
 				EC01884327214A080096A59F /* Assets.xcassets in Resources */,
+				ECC3E2F72724146300A9F7FC /* laces.jpg in Resources */,
+				ECC3E2F92724146300A9F7FC /* converse_bump.jpg in Resources */,
 				ECC3E2EB27228D7300A9F7FC /* CollectionViewCell.xib in Resources */,
+				ECC3E2EF2723E03F00A9F7FC /* ObjectSceneViewCtrl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +183,7 @@
 				EC01883A27214A070096A59F /* AppDelegate.swift in Sources */,
 				ECC3E2E62722886800A9F7FC /* CustomTableViewCell.swift in Sources */,
 				EC01883C27214A070096A59F /* SceneDelegate.swift in Sources */,
+				ECC3E2EE2723E03F00A9F7FC /* ObjectSceneViewCtrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XZJD36PUZW;
 				INFOPLIST_FILE = ARApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XZJD36PUZW;
 				INFOPLIST_FILE = ARApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

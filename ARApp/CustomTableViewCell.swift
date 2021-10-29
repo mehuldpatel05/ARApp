@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -24,6 +24,11 @@ class CustomTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         // Configure the view for the selected state
     }
     
+}
+
+extension CustomTableViewCell : UICollectionViewDelegate {}
+
+extension CustomTableViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
           return 15
     }
@@ -33,4 +38,8 @@ class CustomTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(indexPath.item)")
+    }
+
 }
