@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol CustomTableViewCellDelegate {
+    func passTheCurrent(tableIndex: Int, collectionViewIndex: Int)
+}
+
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
+   
+    var delegate: CustomTableViewCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,7 +45,7 @@ extension CustomTableViewCell : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath.item)")
+        delegate?.passTheCurrent(tableIndex: 0, collectionViewIndex: indexPath.item)
     }
 
 }

@@ -7,15 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,CustomTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    var customTableViewCell = CustomTableViewCell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Physics AR"
         // Do any additional setup after loading the view.
+        customTableViewCell.delegate = self
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
     }
 
@@ -25,6 +29,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.navigationController?.navigationBar.tintColor = UIColor(red: 211/255, green: 86/255, blue: 50/255, alpha: 1.0)
     }
     
+    //Delegate method
+    func passTheCurrent(tableIndex: Int, collectionViewIndex: Int) {
+        print("collectionViewIndex \(collectionViewIndex)")
+        let objSceneViewCtrl = ObjectSceneViewCtrl()
+        self.navigationController?.pushViewController(objSceneViewCtrl, animated: true)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
