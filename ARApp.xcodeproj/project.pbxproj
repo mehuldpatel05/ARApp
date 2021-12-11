@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7FE7AFA7D41024CA937EEFB /* Pods_ARApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDC530C84EDBC4612417C3F /* Pods_ARApp.framework */; };
 		EC01883A27214A070096A59F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01883927214A070096A59F /* AppDelegate.swift */; };
 		EC01883C27214A070096A59F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01883B27214A070096A59F /* SceneDelegate.swift */; };
 		EC01884327214A080096A59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC01884227214A080096A59F /* Assets.xcassets */; };
@@ -27,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050932AF3A71E3685716DD99 /* Pods-ARApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARApp.debug.xcconfig"; path = "Target Support Files/Pods-ARApp/Pods-ARApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6EDC530C84EDBC4612417C3F /* Pods_ARApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49023E2CB8E4E5A62CEE009 /* Pods-ARApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARApp.release.xcconfig"; path = "Target Support Files/Pods-ARApp/Pods-ARApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC01883627214A070096A59F /* ARApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC01883927214A070096A59F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC01883B27214A070096A59F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,17 +57,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FE7AFA7D41024CA937EEFB /* Pods_ARApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3554142DB88FDDFFA94B73F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				050932AF3A71E3685716DD99 /* Pods-ARApp.debug.xcconfig */,
+				D49023E2CB8E4E5A62CEE009 /* Pods-ARApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7EE8A14869ADB800343ABCCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EDC530C84EDBC4612417C3F /* Pods_ARApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC01882D27214A070096A59F = {
 			isa = PBXGroup;
 			children = (
 				EC01883827214A070096A59F /* ARApp */,
 				EC01883727214A070096A59F /* Products */,
+				3554142DB88FDDFFA94B73F8 /* Pods */,
+				7EE8A14869ADB800343ABCCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC01884A27214A080096A59F /* Build configuration list for PBXNativeTarget "ARApp" */;
 			buildPhases = (
+				F8DC5D9178BE47BD46CFCFCC /* [CP] Check Pods Manifest.lock */,
 				EC01883227214A070096A59F /* Sources */,
 				EC01883327214A070096A59F /* Frameworks */,
 				EC01883427214A070096A59F /* Resources */,
+				41DDCC838EC6B4904517733C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +199,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41DDCC838EC6B4904517733C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARApp/Pods-ARApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARApp/Pods-ARApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARApp/Pods-ARApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DC5D9178BE47BD46CFCFCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC01883227214A070096A59F /* Sources */ = {
@@ -319,6 +388,7 @@
 		};
 		EC01884B27214A080096A59F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050932AF3A71E3685716DD99 /* Pods-ARApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +409,7 @@
 		};
 		EC01884C27214A080096A59F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D49023E2CB8E4E5A62CEE009 /* Pods-ARApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
