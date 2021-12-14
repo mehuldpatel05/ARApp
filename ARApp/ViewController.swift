@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,CustomTableViewCellDelegate {
 
@@ -15,12 +16,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Solar AR"
         customTableViewCell.delegate = self
         
         tableView.delegate = self
         tableView.dataSource = self
         
         self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
+        fetchImages()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +32,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.navigationController?.navigationBar.tintColor = UIColor(red: 211/255, green: 86/255, blue: 50/255, alpha: 1.0)
     }
     
+    func fetchImages() {
+      let request = AF.request("http://13.233.31.228/thumbnail/service.php")
+      request.responseJSON { (data) in
+        print(data)
+      }
+    }
+
     //Delegate method
     func passTheCurrent(tableIndex: Int, collectionViewIndex: Int) {
         print("collectionViewIndex \(collectionViewIndex)")
@@ -37,7 +47,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        let rowCount = 3
+        return rowCount
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -45,9 +56,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let customCell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        customCell.delegate = self
-        return customCell
+        let customTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+        customTableViewCell.delegate = self
+        customTableViewCell.collectionView.tag = indexPath.item
+        return customTableViewCell
     }
 
 }

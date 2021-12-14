@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol CustomTableViewCellDelegate {
     func passTheCurrent(tableIndex: Int, collectionViewIndex: Int)
@@ -16,6 +17,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
    
     var delegate: CustomTableViewCellDelegate?
+    var incrementer = 0
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,12 +38,25 @@ extension CustomTableViewCell : UICollectionViewDelegate {}
 
 extension CustomTableViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-          return 15
+          return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath as IndexPath) as! CollectionViewCell
-        return cell
+        let collectionViewcell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath as IndexPath) as! CollectionViewCell
+        collectionViewcell.tag = incrementer
+        
+        if collectionView.tag == 0 {
+            collectionViewcell.titleLabel.text = "0"
+        }
+        if collectionView.tag == 1 {
+            collectionViewcell.titleLabel.text = "1"
+        }
+        if collectionView.tag == 2 {
+            collectionViewcell.titleLabel.text = "2"
+        }
+        
+        incrementer = incrementer + 1
+        return collectionViewcell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
