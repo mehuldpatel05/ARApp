@@ -9,7 +9,8 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var thumbnailTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
