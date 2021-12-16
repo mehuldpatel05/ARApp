@@ -52,7 +52,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        
+        var rowHeight : CGFloat = 0
+        switch indexPath.section {
+        case 0:
+            rowHeight = 110
+        case 1:
+            rowHeight = 220
+        case 2:
+            rowHeight = 330
+        default:
+            break
+        }
+        return rowHeight
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

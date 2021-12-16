@@ -38,7 +38,20 @@ extension CustomTableViewCell : UICollectionViewDelegate {}
 
 extension CustomTableViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-          return 6
+        var numberOfCollCell = 0
+        if collectionView.tag == 0 {
+            collectionView.frame = CGRect(x: 5, y: 5, width: (self.window?.frame.width)!, height: 110)
+            numberOfCollCell = 6
+        }
+        if collectionView.tag == 1 {
+            collectionView.frame = CGRect(x: 5, y:5, width: (self.window?.frame.width)!, height: 220)
+            numberOfCollCell = 12
+        }
+        if collectionView.tag == 2 {
+            collectionView.frame = CGRect(x: 5, y: 5, width: (self.window?.frame.width)!, height: 330)
+            numberOfCollCell = 18
+        }
+          return numberOfCollCell
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
