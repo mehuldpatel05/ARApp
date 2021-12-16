@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         
         self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
-        fetchImages()
+//        fetchImages()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rowCount = 3
+        let rowCount = 1
         return rowCount
     }
     
@@ -56,10 +56,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let customTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
         customTableViewCell.delegate = self
-        customTableViewCell.collectionView.tag = indexPath.item
+        customTableViewCell.collectionView.tag = indexPath.section
         return customTableViewCell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        60
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
+        let sectionName: String
+        switch section {
+            case 0:
+                sectionName = NSLocalizedString("Section 1", comment: "Section 1")
+            case 1:
+                sectionName = NSLocalizedString("Section 2", comment: "Section 2")
+            case 2:
+                sectionName = NSLocalizedString("Section 3", comment: "Section 3")
+
+            default:
+                sectionName = ""
+        }
+        return sectionName
     }
 
 }
